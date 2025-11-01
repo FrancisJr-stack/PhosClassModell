@@ -11,6 +11,7 @@ model = load_model(validate_)
 # streamlit app
 
 st.title("Juniors App")
+st.write("PLEASE INPUT A SINGLE IMAGE OF RIPE OR UNRIPE TOMATOES")
 st.write("Ripe and Unripe Tomatoes Classification")
 uploaded = st.file_uploader("choose an image", type=['jpg', 'png', 'jpeg'])
 if uploaded:
@@ -24,11 +25,8 @@ if uploaded:
         if i == 1:
             st.write("An unripe tomato")
             st.write("Please do not eat")
-        elif i == 0:
+        else:
             st.write("This is a ripe tomato")
             st.write("Yummy")
-        elif i ==0:
-            st.write("Unrognisable image of tomato")
-            st.write("Please input a valid image")
 
 #     model.summary()
