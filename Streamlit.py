@@ -3,7 +3,7 @@ from keras.models import load_model
 import numpy as np
 import streamlit as st
 from PIL import Image
-validate_ = r"C:\Users\USER\PycharmProjects\PythonProject\Streamss\Streams\stream\Ripe_Unripe_classification.keras"
+validate_ = "Ripe_Unripe_classification.keras"
 model = load_model(validate_)
 # streamlit app
 
