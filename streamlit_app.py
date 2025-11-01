@@ -7,7 +7,7 @@ from keras.models import load_model
 import numpy as np
 from PIL import Image
 
-validate_ = r"/workspaces/PhosClassModell/Ripe_Unripe_classification.keras"
+validate_ = "Ripe_Unripe_classification.keras"
 model = load_model(validate_)
 # streamlit app
 
