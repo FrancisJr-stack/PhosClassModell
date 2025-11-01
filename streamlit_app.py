@@ -27,7 +27,7 @@ if uploaded:
         elif i == 0:
             st.write("This is a ripe tomato")
             st.write("Yummy")
-        else:
+        elif i ==0:
             st.write("Unrognisable image of tomato")
             st.write("Please input a valid image")
 
