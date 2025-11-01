@@ -3,7 +3,16 @@ from keras.models import load_model
 import numpy as np
 import streamlit as st
 from PIL import Image
-validate_ = r"C:\Users\USER\PycharmProjects\PythonProject\Streamss\Streams\stream\Ripe_Unripe_classification.keras"
+import os
+Validate = "https://github.com/FrancisJr-stack/PhosClassModell/blob/3d8ca916f205235d1e917991f7b9c076d153fbb8/Ripe_Unripe_classification.keras"  # ← spaces, no underscores
+MODEL_PATH = os.path.join(os.path.dirname(__file__), Validate)
+
+def load_keras_model():
+    if not os.path.exists(MODEL_PATH):
+        st.error(f"Model not found: {MODEL_PATH}")
+        st.stop()
+    return load_model(MODEL_PATH)
+Model = load_keras_model()
 model = load_model(validate_)
 # streamlit app
 
