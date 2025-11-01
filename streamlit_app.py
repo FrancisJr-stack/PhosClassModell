@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
-
 from keras.preprocessing.image import load_img, img_to_array
 from keras.models import load_model
 import numpy as np
@@ -12,7 +11,7 @@ model = load_model(validate_)
 # streamlit app
 
 st.title("Juniors App")
-st.write("Ripe and Unripe Tomatoes prediction")
+st.write("Ripe and Unripe Tomatoes Classification")
 uploaded = st.file_uploader("choose an image", type=['jpg', 'png', 'jpeg'])
 if uploaded:
     image = Image.open(uploaded)
@@ -25,8 +24,11 @@ if uploaded:
         if i == 1:
             st.write("An unripe tomato")
             st.write("Please do not eat")
-        else:
+        elif i == 0:
             st.write("This is a ripe tomato")
             st.write("Yummy")
+        else:
+            st.write("Unrognisable image of tomato")
+            st.write("Please input a valid image")
 
 #     model.summary()
