@@ -53,7 +53,6 @@ if uploaded_file:
     # **Both** probs < threshold → treat as *unknown* (not a tomato)
     if Unripe_prob < CONFIDENCE_THRESHOLD and Ripe_prob < CONFIDENCE_THRESHOLD:
         st.error("🚫 **Unknown image** – this does not look like a ripe or unripe tomato.")
-        st.write(f"Ripe prob: {Unripe_prob:.2%} | Unripe prob: {Ripe_prob:.2%}")
     else:
         # Normal classification (one class is confident)
         if max_prob < CONFIDENCE_THRESHOLD:
