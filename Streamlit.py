@@ -4,7 +4,7 @@ import numpy as np
 import streamlit as st
 from PIL import Image
 import os
-Validate = "Ripe_Unripe_classification.keras"  # ← spaces, no underscores
+Validate = "https://github.com/FrancisJr-stack/PhosClassModell/blob/3d8ca916f205235d1e917991f7b9c076d153fbb8/Ripe_Unripe_classification.keras"  # ← spaces, no underscores
 MODEL_PATH = os.path.join(os.path.dirname(__file__), Validate)
 
 def load_keras_model():
