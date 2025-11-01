@@ -1,2 +1,7 @@
 streamlit
 pandas
+h5py
+keras
+pillow
+streamlit
+tensorflow
